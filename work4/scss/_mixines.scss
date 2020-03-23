@@ -1,0 +1,17 @@
+@mixin button ($background-color: #000, $btn-text-color: #fff) {
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px 20px;
+	color: $btn-text-color;
+	background: $background-color;
+	text-transform: uppercase;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: $font-family;
+	font-size: 15px;
+	
+	&:hover {
+		background: lighten($background-color, 20%);
+	}
+	
+}
