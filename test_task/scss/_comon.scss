@@ -17,7 +17,6 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
 
-
     i {
         font-size: 62px;
 
@@ -30,17 +29,13 @@
         }
     }
 
-
     strong {
         font-style: italic;
         font-size: 25px;
         padding: 15px 13px 17px 46px;
         letter-spacing: 1.5px;
         border-right: 2px solid #ffc107;
-
-
     }
-
 
     span {
         font-size: 14px;
@@ -82,6 +77,11 @@
         display: block;
         position: relative;
         font-size: 22px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     .icon-user:before {
@@ -103,8 +103,6 @@
         left: -37px;
     }
 }
-
-
 
 .profile-logo:before {
     content: "";
@@ -136,6 +134,7 @@
     i {
         position: relative;
         font-size: 542px;
+        pointer-events: none;
 
         &:before {
             position: absolute;
@@ -158,8 +157,6 @@ h1 {
     left: 40px;
 
 }
-
-
 
 .section_header {
 
@@ -195,8 +192,6 @@ h2 {
     margin: 0 26px 0 0;
     transition: all 0.3s ease;
 
-
-
     &__btn {
         border-radius: 5px;
         border: 2px solid #fff;
@@ -210,6 +205,7 @@ h2 {
         cursor: pointer;
         margin: 0 16px 0 0;
         min-width: 138px;
+        transition: all 0.3s ease;
 
         &:hover {
             opacity: 0.5;
@@ -422,8 +418,12 @@ h2 {
         a {
             text-decoration: none;
             position: relative;
-
             color: #4b565e;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
 
         .icon-share:before {
@@ -512,8 +512,6 @@ h2 {
     margin: 0 26px 0 0;
     transition: all 0.3s ease;
 
-
-
     &__btn {
         border-radius: 5px;
         border: 2px solid #fff;
@@ -542,6 +540,11 @@ h2 {
     border-bottom: 2px solid $header-blue;
     text-decoration: none;
     height: 18px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .slide-row {
@@ -589,6 +592,7 @@ h2 {
             z-index: 2;
             transform: translate(-50%, -50%);
 
+
             &:before {
                 position: absolute;
                 top: 50%;
@@ -606,8 +610,6 @@ h2 {
             object-fit: cover;
         }
     }
-
-
 
     &__text {
         flex-basis: 850px;
@@ -662,6 +664,11 @@ h2 {
                 text-decoration: none;
                 position: relative;
                 color: #4b565e;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
 
             .icon-share:before {
@@ -731,8 +738,6 @@ h2 {
     }
 }
 
-
-
 .footer {
     background: $main-black;
     overflow: hidden;
@@ -768,7 +773,7 @@ h2 {
         &:before {
             position: absolute;
             top: -198px;
-            left: 407px;     
+            left: 407px;
         }
     }
 }
@@ -807,8 +812,11 @@ h2 {
         font-size: 25px;
         font-style: italic;
         padding: 0 12px;
+        transition: all 0.3s ease;
 
-
+        &:hover {
+            opacity: 0.5;
+        }
     }
 }
 
