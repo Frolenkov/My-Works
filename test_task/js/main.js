@@ -23,7 +23,7 @@ filterSelection("all")
 
 function filterSelection(c) {
     var x, i;
-    x = document.getElementsByClassName("slide");
+    x = document.getElementsByClassName("slide-wrap");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
         w3RemoveClass(x[i], "show");
@@ -64,13 +64,13 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-var btnContainer = document.getElementById("btns-holder-row");
-var btns = btnContainer.getElementsByClassName("most-popular__filter__btn");
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+var btnContainerRow = document.getElementById("btns-holder-row");
+var btnsRow = btnContainerRow.getElementsByClassName("most-popular__filter__btn");
+for (var i = 0; i < btnsRow.length; i++) {
+    btnsRow[i].addEventListener("click", function() {
+        var currentRow = document.getElementsByClassName("active-row");
+        currentRow[0].className = currentRow[0].className.replace(" active-row", "");
+        this.className += " active-row";
     });
 }
 
@@ -89,3 +89,6 @@ circleArray.forEach(function(item) {
     var rating = item.parentNode.parentNode;
     setProgress(rating.dataset.grade)
 })
+
+var mixer = mixitup ('.most-popular__slider');
+
