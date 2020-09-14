@@ -1,0 +1,257 @@
+.header {
+    height: 95px;
+    background-color: #fff;
+    color: #1f373d;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-opener {
+    display: none;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 0 0;
+
+    a {
+        text-decoration: none;
+        color: #1f373d;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 13px;
+        transition: all 0.3s ease;
+
+        &__item {
+            padding: 0 15px;
+
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &:hover>a {
+                color: #ffcc01;
+            }
+        }
+    }
+}
+
+.logo {
+    &__text {
+        font-size: 25px;
+        color: #1f373d;
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 200px;
+    }
+}
+
+.auth {
+    display: flex;
+    padding: 0 60px 0 0;
+
+    &__item {
+        padding: 13px 30px;
+        font-size: 13px;
+        color: #1f373d;
+        transition: all 0.3s ease;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: #ffcc01;
+        }
+
+        &--background {
+            background-color: #ffcc01;
+
+            &:hover {
+                color: #ffcc01;
+                background-color: #1f373d;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .logo {
+        &__text {
+            margin-right: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .logo {
+        &__text {
+            margin-right: 50px;
+        }
+    }
+
+    .main-nav {
+        .nav-list {
+            &__item {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .auth {
+        padding-right: 25px;
+
+        &__item {
+            padding: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        &__text {
+            margin-right: 35px;
+        }
+    }
+
+    .main-nav {
+        .nav-list {
+            &__item {
+                padding: 0 5px;
+            }
+        }
+    }
+
+    .auth {
+        padding-right: 15px;
+
+        &__item {
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-nav {
+        justify-content: flex-end;
+        position: relative;
+
+        .nav-list {
+            opacity: 0;
+            visibility: hidden;
+            display: block;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: -160px;
+            right: 0px;
+            z-index: 1;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 3px solid #ffcc01;
+            width: 200px;
+
+            &__item {
+                padding: 16px 20px;
+
+            }
+        }
+
+    }
+
+    .menu-opener {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        margin-right: 15px;
+        order: 2;
+    }
+
+    .menu-checkbox:checked~.nav-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(200px);
+    }
+
+
+    .menu-opener:before,
+    .menu-opener:after,
+    .menu-opener span {
+        position: absolute;
+        height: 3px;
+        width: 20px;
+        top: 0;
+        left: 0;
+        content: '';
+        transition: all 0.3s;
+        background: #ffcc01;
+
+    }
+
+    .menu-opener:after {
+        top: 8.5px;
+    }
+
+    .menu-opener span {
+        top: 17px;
+    }
+
+    .menu-checkbox:checked+.menu-opener:after {
+        opacity: 0;
+    }
+
+    .menu-checkbox:checked+.menu-opener:before {
+        opacity: 1;
+        transform: rotate(45deg);
+        left: 0px;
+        top: 8px;
+    }
+
+    .menu-checkbox:checked+.menu-opener span {
+        opacity: 1;
+        transform: rotate(-45deg);
+        left: 0px;
+        top: 8px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .menu-opener {
+        margin-right: 0;
+    }
+
+    .logo {
+        &__text {
+            margin-right: 5px;
+        }
+    }
+
+    .auth {
+        padding-right: 5px;
+
+        &__item {
+            padding: 5px;
+        }
+    }
+}

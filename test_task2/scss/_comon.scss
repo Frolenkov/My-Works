@@ -1,0 +1,213 @@
+h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 25px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.about_us {
+    height: 500px;
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url('../img/about_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .breadcrumb {
+        display: flex;
+        justify-content: center;
+
+
+        &__item {
+            color: #fff;
+            margin-right: 30px;
+            position: relative;
+
+            &:hover>a {
+                color: #ffa000;
+            }
+
+            &:after {
+                content: ">>";
+                font-weight: bold;
+                position: absolute;
+                right: -25px;
+            }
+
+            &:last-child:after {
+                content: none;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            &.active {
+                color: #ffa000;
+            }
+        }
+    }
+}
+
+.about_agency {
+    padding: 75px 0;
+}
+
+.agency-content {
+    display: flex;
+
+
+    &__image {
+        flex: 1 0 0;
+        margin-right: 15px;
+
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        flex: 1 0 0;
+        margin-left: 15px;
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .list-title {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 55px 0 25px 0;
+            display: block;
+        }
+    }
+
+
+
+    .benefits {
+        padding-left: 30px;
+
+        &__item {
+            margin-bottom: 20px;
+            font-size: 15px;
+            position: relative;
+
+            &:before {
+                content: "";
+                height: 6px;
+                width: 12px;
+                transform: rotate(-45deg);
+                border-bottom: 2px solid #ffa000;
+                border-left: 2px solid #ffa000;
+                display: block;
+                position: absolute;
+                left: -20px;
+                top: 2px;
+            }
+        }
+    }
+}
+
+.what_we_doing {
+    background-color: #eeeeee;
+    padding: 60px 0 100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+
+    &__image {
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        padding: 0 25px 15px;
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .agency-content {
+        flex-direction: column;
+
+        &__image {
+            margin-bottom: 25px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: minmax(100px, 1fr);
+
+    }
+
+    h2 {
+        margin: 0 0 25px;
+    }
+
+    .about_agency {
+        padding: 25px 0;
+    }
+
+    .what_we_doing {
+        padding: 25px 0;
+    }
+
+}
